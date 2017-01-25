@@ -1,0 +1,33 @@
+{
+  "name": "bostonsalsa",
+  "homepage": "https://github.com/deder01/BostonSalsa",
+  "authors": [
+    "David Eder <david.eder26@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "angular-cookies": "^1.6.1",
+    "bootstrap": "^3.3.7",
+    "bootstrap-material-design": "^4.0.2",
+    "jquery": "^3.1.1",
+    "ng-dialog": "ngDialog#^0.6.6",
+    "underscore": "^1.8.3",
+    "snackbar": "^0.1.5"
+  },
+  "resolutions": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^2.2"
+  }
+}
