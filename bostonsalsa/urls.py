@@ -24,6 +24,7 @@ from rest_framework_nested import routers
 
 # Project
 from account.views import AccountViewSet
+from bostonsalsa.views import IndexView
 
 # .. End Imports
 
@@ -39,4 +40,7 @@ urlpatterns = [
     #   /accounts/<username>
     #url(r'^api/v1/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
+
+    # all others re-route to home page
+    url(r'^.*$', IndexView.as_view(), name='index'),
 ]
