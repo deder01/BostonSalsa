@@ -23,7 +23,7 @@ class AccountManager(BaseUserManager):
 
         return account
     
-    def create_superuser(self, email, password):
+    def create_superuser(self, email, password, **kwargs):
         account = self.create_user(email, password, **kwargs)
 
         account.is_admin = True
@@ -58,8 +58,9 @@ class Account(AbstractBaseUser):
 
     objects=AccountManager()
 
-    # lookup field and required fields
-    REQUIRED_FIELDS = ['email', 'first_name']
+    # lookup field and required fields (for superuser) 
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['first_name']
 
     def __unicode__(self):
         return self.email
