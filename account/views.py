@@ -1,21 +1,25 @@
-# Python apps
+# .. Imports
+
+# Python
 import json
 
-# Django apps
+# Django
+from django.contrib.auth import authenticate, login, logout
 
-# Third party apps
+# Third party
 from rest_framework import permissions, viewsets, status, views
 from rest_framework.response import Response
 
-# Project apps
+# Project
 from account.models import Account
 from account.permissions import IsAccountOwner
 from account.serializers import AccountSerializer
 
+# .. End Imports
 
-from django.contrib.auth import authenticate, login, logout
 
-
+# ViewSet for accounts
+# Inherits from viewsets.ModelViewSet and overrides create
 class AccountViewSet(viewsets.ModelViewSet):
     lookup_field = 'username'
     queryset = Account.objects.all()
@@ -57,6 +61,8 @@ class AccountViewSet(viewsets.ModelViewSet):
             'message': 'Account could not be created with received data.'
         }, status=status.HTTP_400_BAD_REQUEST)
 
+# View for login page
+# Inherits from views.APIView and defines post
 class LoginView(views.APIView):
     def post(self, request, format=None):
         data = json.loads(request.body)
@@ -84,7 +90,8 @@ class LoginView(views.APIView):
                 'message': 'Username/password combination invalid'
             }, status=status.HTTP_401_UNAUTHORIZED)
 
-
+# View for logout page
+# Inherits from views.APIView and defines post
 class LogoutView(views.APIView):
     permission_classes = (permissions.IsAuthenticated,)
 

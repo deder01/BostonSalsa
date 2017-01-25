@@ -1,10 +1,15 @@
+# .. Imports
+
+# Python
 from __future__ import unicode_literals
 
-# Django models
+# Django
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.base_user import BaseUserManager
 from django.core.validators import RegexValidator
 from django.db import models
+
+# .. End Imports
 
 
 # Account manager
