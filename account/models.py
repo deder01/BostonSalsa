@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+# Django models
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.base_user import BaseUserManager
 from django.core.validators import RegexValidator
