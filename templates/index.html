@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="bostonsalsa">
+<html ng-app="salsa">
 <head>
     <title>Your Gateway to Boston Salsa!</title>
 
@@ -14,6 +14,11 @@
         {% include 'navbar.html' %}
     </header>
     <main>
+        <div class="contrainer-fluid">
+            <div class="row">
+                <div class="col-xs-12 ng-view"></div>
+            </div>
+        </div>
     </main>
     <footer>
     </footer>
