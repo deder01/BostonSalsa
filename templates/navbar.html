@@ -1,17 +1,16 @@
 <!--Navbar-->
-    <nav class="navbar navbar-dark bg-primary">
-
-        <!-- Collapse button-->
-        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">
-            <i class="fa fa-bars"></i>
-        </button>
+    <nav class="navbar navbar-toggleable-md navbar-dark bg-primary">
 
         <div class="container">
+        <!-- Collapse button-->
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapseEx2">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">Boston Salsa</a>
 
             <!--Collapse content-->
-            <div class="collapse navbar-toggleable-xs" id="collapseEx2">
+            <div class="collapse navbar-collapse" id="collapseEx2">
                 <!--Navbar Brand-->
-                <a class="navbar-brand" href="#">Boston Salsa</a>
                 <!--Links-->
                 <ul class="nav navbar-nav float-xs-right">
                     {% if user.is_authenticated %}
